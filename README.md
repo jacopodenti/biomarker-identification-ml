@@ -1,44 +1,41 @@
-# TESI-DENTIPOMPIANI
-Analisi di cluster e modelli predittivi per l’identificazione di biomarker in ambito biomedico
+# Cluster Analysis and Predictive Models for Biomarker Identification
 
----
+Bachelor's thesis project — University of Milan, AnacletoLAB  
+Computational Biology and Bioinformatics Lab
 
-## 🧠 Overview of Scripts
+## Overview
 
-### `corr-analisi-prova.py`
-Performs **correlation analysis** and **feature selection**:
-- Computes the correlation matrix.  
-- Removes features with |r| > 0.8 to reduce collinearity.  
-- Produces a list of selected independent variables.
+This project applies machine learning to behavioral data from murine models 
+to support biomarker identification in a biomedical research context.
+The pipeline covers feature selection, multi-model comparison and 
+interpretability analysis using SHAP values.
 
-### `multimodello.py`
-Compares four supervised learning algorithms:
-- **Random Forest**  
-- **Logistic Regression**  
-- **Support Vector Machine (SVM)**  
-- **XGBoost**
+## Pipeline
 
-Each model is evaluated through:
-- **Accuracy**, **F1-score**, and **AUPRC (Area Under Precision-Recall Curve)**.  
-The results are summarized in **barcharts** comparing model performance for males, females, and overall means.
+### 1. `corr-analisi-prova.py` — Feature Selection
+- Computes correlation matrix
+- Removes features with |r| > 0.8 to reduce collinearity
+- Outputs a list of selected independent variables
 
-### `final-shap.py`
-Implements the **complete analysis pipeline**, including model interpretation:
-- Training of **Random Forest** and **Logistic Regression** with repeated cross-validation (11 iterations).  
-- Calculation of **Permutation Importance** and **SHAP values**.  
-- Automatic generation of:
-  - Comparative forest plots (RF vs LR)
-  - Normalized SHAP vs Permutation plots
-  - Individual **SHAP waterfall plots**
-- Optional flag `USE_TEST_FOR_PERM` allows computation on Train or Test sets.
+### 2. `multimodello.py` — Model Comparison
+Trains and evaluates four supervised learning algorithms:
+- Random Forest
+- Logistic Regression
+- Support Vector Machine (SVM)
+- XGBoost
 
----
+Evaluation metrics: Accuracy, F1-score, AUPRC  
+Results are visualized as barcharts across male, female and overall groups.
 
-## ⚙️ Requirements
+### 3. `final-shap.py` — Full Pipeline + Interpretability
+- Random Forest and Logistic Regression with repeated cross-validation (11 iterations)
+- Permutation Importance and SHAP values
+- Outputs: forest plots (RF vs LR), normalized SHAP vs Permutation plots, 
+  individual SHAP waterfall plots
+- Flag `USE_TEST_FOR_PERM` toggles computation on train or test set
 
-Python ≥ 3.9  
-Install dependencies via:
+## Requirements
 
-```bash
+Python ≥ 3.9
+
 pip install numpy pandas matplotlib seaborn scikit-learn shap xgboost openpyxl
-
