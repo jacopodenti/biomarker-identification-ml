@@ -91,15 +91,15 @@ Trains and evaluates four supervised learning algorithms on sex-stratified group
 
 **Global bar (mean |SHAP|)**
 
-![SHAP bar females LR](femmine_Logistic_Regression_shap_bar.png)
+![SHAP bar females LR](esecuzione%201%20final/femmine_Logistic_Regression_shap_bar.png)
 
 **Beeswarm (feature value vs. impact)**
 
-![SHAP beeswarm females LR](femmine_Logistic_Regression_shap_beeswarm.png)
+![SHAP beeswarm females LR](esecuzione%201%20final/femmine_Logistic_Regression_shap_beeswarm.png)
 
 **Waterfall — sample 0**
 
-![SHAP waterfall females LR](femmine_Logistic_Regression_shap_waterfall_sample0.png)
+![SHAP waterfall females LR](esecuzione%201%20final/femmine_Logistic_Regression_shap_waterfall_sample0.png)
 
 ---
 
@@ -107,15 +107,15 @@ Trains and evaluates four supervised learning algorithms on sex-stratified group
 
 **Global bar (mean |SHAP|)**
 
-![SHAP bar males LR](maschi_Logistic_Regression_shap_bar.png)
+![SHAP bar males LR](esecuzione%201%20final/maschi_Logistic_Regression_shap_bar.png)
 
 **Beeswarm**
 
-![SHAP beeswarm males LR](maschi_Logistic_Regression_shap_beeswarm.png)
+![SHAP beeswarm males LR](esecuzione%201%20final/maschi_Logistic_Regression_shap_beeswarm.png)
 
 **Waterfall — sample 0**
 
-![SHAP waterfall males LR](maschi_Logistic_Regression_shap_waterfall_sample0.png)
+![SHAP waterfall males LR](esecuzione%201%20final/maschi_Logistic_Regression_shap_waterfall_sample0.png)
 
 ---
 
@@ -123,21 +123,21 @@ Trains and evaluates four supervised learning algorithms on sex-stratified group
 
 **Overall average — F1**
 
-![Final average F1](final_average_importance_f1_RF_vs_LR.png)
+![Final average F1](esecuzione%201%20final/final_average_importance_f1_RF_vs_LR.png)
 
 **Overall average — Precision**
 
-![Final average Precision](final_average_importance_precision_RF_vs_LR.png)
+![Final average Precision](esecuzione%201%20final/final_average_importance_precision_RF_vs_LR.png)
 
 **Overall average — Recall**
 
-![Final average Recall](final_average_importance_recall_RF_vs_LR.png)
+![Final average Recall](esecuzione%201%20final/final_average_importance_recall_RF_vs_LR.png)
 
 ---
 
 ### Forest Plot — SHAP vs Permutation (Females, LR, F1)
 
-![Forest plot females LR](femmine_Logistic_Regression_forest_SHAP_vs_PERM_f1.png)
+![Forest plot females LR](esecuzione%201%20final/femmine_Logistic_Regression_forest_SHAP_vs_PERM_f1.png)
 
 ---
 
@@ -178,4 +178,4 @@ pip install scikit-learn xgboost shap pandas numpy matplotlib seaborn
 
 ## Context
 
-This project was developed as part of a Bachelor's thesis at the **AnacletoLAB — Computational Biology and Bioinformatics Lab**, University of Milan. The behavioral data comes from a murine model of chronic mild stress (CMS), a widely used paradigm for studying depression-related phenotypes. The goal is to identify behavioral biomarkers that can reliably distinguish stressed from control animals, with a sex-stratified analysis to account for known differences in stress response between males and females.
+This project was developed as part of a Bachelor's thesis at the **AnacletoLAB — Computational Biology and Bioinformatics Lab**, University of Milan. The behavioral data comes from a murine model of chronic mild stress (CMS), a widely used paradigm for studying depression-related phenotypes. The goal is to identify behavioral biomarkers that can reliably distinguish stressed from control animals, with a sex-stratified analysis to account for known differences in stress response between males and females.ehavioral biomarkers that can reliably distinguish stressed from control animals, with a sex-stratified analysis to account for known differences in stress response between males and females.
