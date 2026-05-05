@@ -178,4 +178,21 @@ pip install scikit-learn xgboost shap pandas numpy matplotlib seaborn
 
 ## Context
 
-This project was developed as part of a Bachelor's thesis at the **AnacletoLAB — Computational Biology and Bioinformatics Lab**, University of Milan. The behavioral data comes from a murine model of chronic mild stress (CMS), a widely used paradigm for studying depression-related phenotypes. The goal is to identify behavioral biomarkers that can reliably distinguish stressed from control animals, with a sex-stratified analysis to account for known differences in stress response between males and females.ehavioral biomarkers that can reliably distinguish stressed from control animals, with a sex-stratified analysis to account for known differences in stress response between males and females.
+This project was developed as part of a Bachelor's thesis at the **AnacletoLAB — Computational Biology and Bioinformatics Lab**, University of Milan. The behavioral data comes from a murine model of chronic mild stress (CMS), a widely used paradigm for studying depression-related phenotypes. The goal is to identify behavioral biomarkers that can reliably distinguish stressed from control animals, with a sex-stratified analysis to account for known differences in stress response between males and females.
+
+---
+
+## Conclusions
+
+The pipeline confirmed that **Random Forest and Logistic Regression** are the most effective models for this task, achieving complementary strengths: RF showed higher sensitivity (recall), while LR delivered greater precision and stability across both sexes.
+
+**Key behavioral biomarkers identified** — consistent across both SHAP and permutation importance methods:
+- `social interaction time` — the single most predictive feature overall
+- `tCENT` (time spent in the center of the arena) — dominant in males
+- `sucrose intake` and `NOR index` — relevant especially in females
+
+**Sex differences** emerged clearly and consistently. In males, stress response is captured by a focused set of social and exploratory features, yielding high and stable classification performance (AUPRC ~0.97–0.98). In females, the behavioral response to CMS is more distributed across social, cognitive, and metabolic domains, resulting in higher intra-group variability and lower overall model performance. This is consistent with neuroscientific literature on sex-specific neuroendocrine stress responses.
+
+**Stability analysis** (train vs. test comparison) confirmed that the models generalize well and are not overfitting to the small sample size — feature importances remain coherent across held-out data.
+
+The modular and reproducible structure of the codebase makes this pipeline a solid starting point for future ML applications in biomedical behavioral research, with potential extensions to multiclass classification, longitudinal data, and integration of physiological/endocrine features.
